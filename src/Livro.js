@@ -21,8 +21,6 @@ export default function Livro() {
           }
         };
         fetchLivros();
-        console.log(livros)
-    
       }, []);
 
     return (
