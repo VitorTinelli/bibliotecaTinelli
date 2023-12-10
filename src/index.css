@@ -1,0 +1,143 @@
+* {
+  font-family: Arial;
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  box-shadow: 1px 1px 4px #81818133;
+  display: flex;
+  height: 80px;
+  width: 100%;
+}
+
+header h1{
+  margin: 0px;
+}
+.banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 80vw;
+  margin-top: 50px;
+}
+
+.banner div {
+  width: 30vw;
+  color: #777;
+}
+
+.banner h3, .tituloPesquisa p {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.banner h1, .tituloPesquisa h1, .tituloResultado h1{
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.banner span {
+  color: #ff0090;
+}
+
+.banner button {
+  background-color: #C9187B;
+  border-radius: 5px;
+  width: 170px;
+  height: 45px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.banner button:hover{
+  background-color: #ee56ac;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 40px;
+  margin: 30px 0px;
+}
+
+footer {
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  box-shadow: 1px 0px 10px #81818133;
+  display: flex;
+  height: 150px;
+}
+
+footer p {
+  margin: 0px;
+}
+
+header form{
+  box-shadow: none;
+  padding: 0px;
+  width: auto;
+  flex-direction: row;
+}
+
+header form input[type="text"] {
+  width: 200px;
+  padding: 10px;
+}
+
+header form input[type="submit"]{
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #C9187B;
+  border-radius: 5px;
+  width: auto;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+header form input[type="submit"]:hover{
+  background-color: #ee56ac;
+}
+
+header div {
+  align-items: center;
+  display: flex;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+ul li img {
+  size: 10px;
+}
+
+main button {
+  background-color: #C9187B;
+  border-radius: 5px;
+  width: 170px;
+  height: 45px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+
+main button:hover{
+  background-color: #ee56ac;
+}

@@ -1,0 +1,66 @@
+.livros img {
+    height: 250px;
+    width: 180px;
+
+}
+
+ul {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+li{
+    margin-right: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo {
+    color: #0D0842;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+    width: 234px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.descricao {
+    width: 234px;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: normal;
+    height: 105px;
+    text-align: justify;
+    color: rgba(13, 8, 66, 0.52);
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.space {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50;
+}
+.card button{
+color: white;
+text-align: center;
+
+font-family: Nunito Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border-radius: 8px;
+}
