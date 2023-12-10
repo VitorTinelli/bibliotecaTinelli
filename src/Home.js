@@ -5,7 +5,6 @@ import Livros from "./modules/livros";
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'Biblioteca do Tinelli';
   }, []);
   return (
     <main>

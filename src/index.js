@@ -6,7 +6,7 @@ import Home from './Home';
 import Livro from './Livro';
 
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
-
+document.title = 'Biblioteca do Tinelli';
 const router = createBrowserRouter([
   {
     element: <App />,
