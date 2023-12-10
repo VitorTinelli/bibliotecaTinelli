@@ -21,6 +21,7 @@ export default function Livro() {
           }
         };
         fetchLivros();
+        document.title = 'Biblioteca do Tinelli';
       }, []);
 
     return (
