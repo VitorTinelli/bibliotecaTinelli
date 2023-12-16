@@ -2,11 +2,15 @@ import "./index.css";
 import banner_fotos from './assets/banner_fotos.png';
 import { useEffect, useState } from "react";
 import Livros from "./modules/livros";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+
+  const navigate = useNavigate()
   useEffect(() => {
     document.title = 'Biblioteca do Tinelli';
   }, []);
+
   return (
     <main>
       <>
@@ -38,7 +42,7 @@ export default function Home() {
           </div>
         </main>
         <footer>
-          <p>Developer: Vitor Muneretto Tinelli</p>
+          <p><span onClick={() => navigate('admLogin')}>Developer</span>: Vitor Muneretto Tinelli</p>
         </footer>
       </>
     </main>

@@ -9,7 +9,6 @@ export default function Livros() {
   const navigate = useNavigate();
 
   const handleButton = () => {
-
     navigate("/livro")
   }
 
@@ -28,9 +27,8 @@ export default function Livros() {
       }
     };
     fetchLivros();
-    console.log(livros)
-
   }, []);
+  
   return (
     <main>
       <>
