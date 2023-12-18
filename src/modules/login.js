@@ -21,7 +21,6 @@ export default function Login() {
    });
 
    if (response.data.user != null){
-    console.log(localStorage.userData)
     navigate('/adminControl')
    } else{
     setErro("Email ou senha incorretos!")

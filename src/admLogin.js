@@ -1,15 +1,24 @@
 import "./index.css";
-import banner_fotos from './assets/banner_fotos.png';
 import { useEffect, useState } from "react";
-import Livros from "./modules/livros";
 import { useNavigate } from "react-router-dom";
 import Login from "./modules/login";
+import supabase from "./supabase";
+
 export default function Home() {
 
   const navigate = useNavigate()
   useEffect(() => {
+    CheckLogin()
     document.title = 'Biblioteca do Tinelli';
   }, []);
+
+  const CheckLogin = async() =>{
+    const check = await supabase.auth.getSession()
+    if (check.data.session == null){
+        navigate('/admLogin')
+    }
+}
+
 
   return (
     <main>
