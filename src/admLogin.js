@@ -14,8 +14,8 @@ export default function Home() {
 
   const CheckLogin = async() =>{
     const check = await supabase.auth.getSession()
-    if (check.data.session == null){
-        navigate('/admLogin')
+    if (check.data.session != null){
+        navigate('/adminControl')
     }
 }
 
