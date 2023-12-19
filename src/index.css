@@ -73,7 +73,8 @@ footer {
   margin-top: 100px;
   box-shadow: 1px 0px 10px #81818133;
   display: flex;
-  height: 150px;
+  height: 80px;
+  width: 100%;
 }
 
 footer p {
@@ -116,10 +117,6 @@ ul {
   flex-direction: row;
 }
 
-ul li img {
-  size: 10px;
-}
-
 main button {
   background-color: #C9187B;
   border-radius: 5px;
@@ -140,4 +137,18 @@ main button {
 
 main button:hover{
   background-color: #ee56ac;
+}
+
+content {
+  max-width: 100%;
+}
+
+.subtitle{
+  border-color: #81818133;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px ;
+  margin-left: 100px; 
+  margin-right: 100px;
+  padding-bottom: 10px;
+  margin-top: 30px;
 }

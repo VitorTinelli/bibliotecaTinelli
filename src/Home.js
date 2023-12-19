@@ -1,7 +1,7 @@
 import "./index.css";
-import banner_fotos from './assets/banner_fotos.png';
 import { useEffect, useState } from "react";
 import Livros from "./modules/livros";
+import LivrosUltimas from "./modules/livrosUltimas";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
@@ -13,6 +13,7 @@ export default function Home() {
 
   return (
     <main>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <>
         <header>
           <h3>Biblioteca do Tinelli</h3>
@@ -28,19 +29,20 @@ export default function Home() {
             </form>
           </div>
         </header>
-        <main>
+        <content>
           <section className="banner">
             <div>
               <h1>Os livros são uma extensão da <span>memória e da imaginação.</span></h1>
               <p>Livros em inglês e português!</p>
               <button>Saiba mais</button>
             </div>
-            <img src={banner_fotos} alt='fotom' width={500} height={426}></img>
+            <img src="https://m.media-amazon.com/images/I/91jmobaCGlL._CLa%7C2964,2355%7C81lKZMY8xzL.jpg,81ZUnayDIlL.jpg%7C0,0,1347,2355+1617,0,1347,2355+673,0,1617,2355_._SY300_.jpg" alt='fotom' width={500} height={426}></img>
           </section>
+          <h3 className="subtitle">Últimas postagens</h3>
           <div className="livros">
-            <Livros></Livros>
+            <LivrosUltimas></LivrosUltimas>
           </div>
-        </main>
+        </content>
         <footer>
           <p><span onClick={() => navigate('admLogin')}>Developer</span>: Vitor Muneretto Tinelli</p>
         </footer>
