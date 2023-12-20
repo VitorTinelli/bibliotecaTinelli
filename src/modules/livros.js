@@ -1,16 +1,16 @@
 import "./livros.css";
 import supabase from "../supabase";
 import { useEffect, useState } from "react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Livros() {
   const [livros, setLivros] = useState([]);
   const navigate = useNavigate();
 
-  const handleButton = () => {
-    navigate("/livro")
-  }
+  const handleButton = (livroId) => {
+    navigate(`/livro/${livroId}`);
+  };
 
   useEffect(() => {
     const fetchLivros = async () => {
@@ -28,24 +28,24 @@ export default function Livros() {
     };
     fetchLivros();
   }, []);
-  
+
   return (
     <main>
       <>
-            <ul className="livros">
-              {livros.map(livro => (
-                <li key={livro.id}>
-                  <div className="card">
-                    <img src={livro.foto} />
-                    <div className="space">
-                    <p className="titulo">{livro.nome}</p>
-                    <p className="descricao">{livro.descricao}</p>
-                    <button onClickCapture={() => sessionStorage.livroSelect=livro.id} onClick={handleButton}>Mais informações</button>
-                    </div>
+        <ul className="livros">
+          {livros.map(livro => (
+            <li key={livro.id}>
+              <div className="card">
+                <img src={livro.foto} />
+                <div className="space">
+                  <p className="titulo">{livro.nome}</p>
+                  <p className="descricao">{livro.descricao}</p>
+                  <button onClick={handleButton}>Mais informações</button>
                 </div>
-                </li>
-              ))}
-            </ul>
+              </div>
+            </li>
+          ))}
+        </ul>
       </>
     </main>
   )

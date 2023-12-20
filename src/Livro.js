@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import supabase from "./supabase";
+import { useParams } from "react-router-dom";
 
 export default function Livro() {
     const [livros, setLivros] = useState([])
-    const id = sessionStorage.livroSelect
+    const {id } = useParams ()
 
     useEffect(() => {
         const fetchLivros = async () => {
@@ -20,6 +21,7 @@ export default function Livro() {
             console.error("Erro ao buscar livros:", error.message);
           }
         };
+        console.log(id)
         fetchLivros();
         document.title = 'Biblioteca do Tinelli';
       }, []);

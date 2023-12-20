@@ -18,7 +18,7 @@ export default function Home() {
         <header>
           <h3>Biblioteca do Tinelli</h3>
           <div>
-            <form action="" method="post" className="form_header">
+            <form className="form_header">
               <input
                 type="text"
                 name="Título"
