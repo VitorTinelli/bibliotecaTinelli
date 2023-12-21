@@ -30,7 +30,7 @@ export default function Home() {
           <Login/>
         </main>
         <footer>
-          <p><span onClick={() => navigate('admLogin')}>Developer</span>: Vitor Muneretto Tinelli</p>
+          <p>Developer: Vitor Muneretto Tinelli</p>
         </footer>
       </>
     </main>
