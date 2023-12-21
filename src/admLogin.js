@@ -9,7 +9,6 @@ export default function Home() {
   const navigate = useNavigate()
   useEffect(() => {
     CheckLogin()
-    document.title = 'Biblioteca do Tinelli';
   }, []);
 
   const CheckLogin = async() =>{

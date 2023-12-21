@@ -11,13 +11,14 @@ header {
   position: relative;
   box-shadow: 1px 1px 4px #81818133;
   display: flex;
-  height: 80PX;
+  height: 10dvh;
   width: 100%;
 }
 
-header h1{
+header h1 {
   margin: 0px;
 }
+
 .banner {
   display: flex;
   justify-content: space-around;
@@ -31,12 +32,15 @@ header h1{
   color: #777;
 }
 
-.banner h3, .tituloPesquisa p {
+.banner h3,
+.tituloPesquisa p {
   font-size: 1.5em;
   font-weight: 400;
 }
 
-.banner h1, .tituloPesquisa h1, .tituloResultado h1{
+.banner h1,
+.tituloPesquisa h1,
+.tituloResultado h1 {
   font-size: 2.5em;
   font-weight: 700;
   margin: 10px 0;
@@ -57,7 +61,7 @@ header h1{
   color: white;
 }
 
-.banner button:hover{
+.banner button:hover {
   background-color: #ee56ac;
 }
 
@@ -70,10 +74,10 @@ header h1{
 footer {
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+
   box-shadow: 1px 0px 10px #81818133;
   display: flex;
-  height: 80px;
+  height: 10dvh;
   width: 100%;
 }
 
@@ -81,7 +85,7 @@ footer p {
   margin: 0px;
 }
 
-header form{
+header form {
   box-shadow: none;
   padding: 0px;
   width: auto;
@@ -93,7 +97,7 @@ header form input[type="text"] {
   padding: 10px;
 }
 
-header form input[type="submit"]{
+header form input[type="submit"] {
   padding: 10px;
   margin-left: 10px;
   background-color: #C9187B;
@@ -104,7 +108,7 @@ header form input[type="submit"]{
   color: white;
 }
 
-header form input[type="submit"]:hover{
+header form input[type="submit"]:hover {
   background-color: #ee56ac;
 }
 
@@ -112,6 +116,7 @@ header div {
   align-items: center;
   display: flex;
 }
+
 ul {
   display: flex;
   flex-direction: row;
@@ -135,7 +140,7 @@ main button {
 }
 
 
-main button:hover{
+main button:hover {
   background-color: #ee56ac;
 }
 
@@ -143,12 +148,71 @@ content {
   max-width: 100%;
 }
 
-.subtitle{
+.subtitle {
   border-color: #81818133;
   border-style: solid;
-  border-width: 0px 0px 1px 0px ;
-  margin-left: 100px; 
+  border-width: 0px 0px 1px 0px;
+  margin-left: 100px;
   margin-right: 100px;
   padding-bottom: 10px;
   margin-top: 30px;
 }
+
+.spacing {
+  min-height: 80dvh;
+  max-height: 100dvh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: var(--iOS-BG, rgba(249, 249, 249, 0.80));
+  flex-direction: column;
+}
+
+.login {
+  display: flex;
+  width: 40dvh;
+  padding: 2dvw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4dvh;
+
+  border-radius: 8px;
+  background: var(--Neutral-White, #FFF);
+}
+
+.spacing h2 {
+  margin-bottom: 2dvh;
+}
+
+.input {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 21dvh;
+
+  border-radius: 4px;
+  border: 1px solid var(--Neutral-Almost-White, #EEE);
+  background: var(--iOS-BG, rgba(249, 249, 249, 0.80));
+  margin-top: 1dvh;
+}
+
+.buttonLogin {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  border-style:none;
+  border-radius: 8px;
+  border-color: #FFF;
+  background: var(--iOS-Pink, #C9187B);
+  width: 23dvh;
+  cursor: pointer;
+}
+
+.buttonLogin:hover {
+  background-color: #ee56ac;
+}
+

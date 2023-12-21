@@ -23,7 +23,6 @@ export default function Livro() {
         };
         console.log(id)
         fetchLivros();
-        document.title = 'Biblioteca do Tinelli';
       }, []);
 
     return (

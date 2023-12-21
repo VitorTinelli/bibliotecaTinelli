@@ -1,15 +1,11 @@
 import "./index.css";
-import { useEffect, useState } from "react";
-import Livros from "./modules/livros";
 import LivrosUltimas from "./modules/livrosUltimas";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
 
   const navigate = useNavigate()
-  useEffect(() => {
-    document.title = 'Biblioteca do Tinelli';
-  }, []);
+
 
   return (
     <main>

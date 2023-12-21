@@ -5,19 +5,25 @@ import supabase from "./supabase.js"
 
 export default function AdminControl() {
     const navigate = useNavigate()
-    async function LogOut() {
-        const { error } = await supabase.auth.signOut('local')
-        navigate('/admLogin')
-    }
+
+    async function LogOut(e) {
+        e.preventDefault(); 
+        const { error } = await supabase.auth.signOut();
+        if (error) {
+          console.log(error);
+        } else {
+          navigate('/admLogin');
+        }
+      }
+
     const CheckLogin = async () => {
-        const check = await supabase.auth.getSession()
+        const check = await supabase.auth.getSession();
         if (check.data.session == null) {
-            navigate('/')
+            navigate('/');
         }
     }
     useEffect(() => {
-        CheckLogin()
-        document.title = 'Biblioteca do Tinelli';
+        CheckLogin();
     }, [])
 
     return (
