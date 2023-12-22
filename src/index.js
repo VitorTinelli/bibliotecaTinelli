@@ -6,6 +6,7 @@ import Home from './Home';
 import Livro from './Livro';
 import AdmLogin from './admLogin';
 import AdminControl from './adminControl';
+import Pesquisa from './pesquisa';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: 'adminControl',
         element: <AdminControl />,
+      },
+      {
+        path: '/pesquisa/:pesquisa',
+        element: <Pesquisa/>
       }
     ]
   }

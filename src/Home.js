@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./index.css";
 import LivrosUltimas from "./modules/livrosUltimas";
 import { useNavigate } from "react-router-dom";
@@ -5,7 +6,12 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
 
   const navigate = useNavigate()
+  const [pesquisa, setPesquisa] = useState()
 
+  function handleSearch() {
+    const encodedPesquisa = encodeURIComponent(pesquisa);
+    navigate(`/pesquisa/${encodedPesquisa}`);
+  }
 
   return (
     <main>
@@ -14,14 +20,15 @@ export default function Home() {
         <header>
           <h3>Biblioteca do Tinelli</h3>
           <div>
-            <form className="form_header">
+            <form className="form_header" onSubmit={handleSearch}>
               <input
                 type="text"
                 name="Título"
                 id="Título"
                 placeholder="Título do livro"
+                value={pesquisa} onChange={(p) => setPesquisa(p.target.value)}
               />
-              <input type="submit" value="Pesquisar" />
+              <input type="submit" value="Pesquisar"/>
             </form>
           </div>
         </header>
