@@ -28,8 +28,9 @@ header h1 {
 }
 
 .banner div {
-  width: 30vw;
+  width: 32dvw;
   color: #777;
+  text-align: justify;
 }
 
 .banner h3,
@@ -214,5 +215,13 @@ content {
 
 .buttonLogin:hover {
   background-color: #ee56ac;
+}
+
+.mouse{
+  cursor: pointer;
+}
+
+.verde{
+  color: lawngreen;
 }
 
