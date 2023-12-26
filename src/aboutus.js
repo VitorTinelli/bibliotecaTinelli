@@ -45,7 +45,7 @@ export default function Aboutus() {
                 </section>
             </content>
             <footer>
-                <p><span onClick={() => navigate('admLogin')}>Developer</span>: Vitor Muneretto Tinelli</p>
+                <p><span onClick={() => navigate('/admLogin')}>Developer</span>: Vitor Muneretto Tinelli</p>
             </footer>
         </>
     )
