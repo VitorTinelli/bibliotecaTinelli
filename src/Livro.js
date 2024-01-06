@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import supabase from "./supabase";
-import { useParams } from "react-router-dom";
-
+import { useParams, useNavigate } from "react-router-dom";
+import Header from "./modules/header";
+import Footer from "./modules/footer";
 export default function Livro() {
   const [livros, setLivros] = useState([])
   const { id } = useParams()
@@ -26,6 +27,7 @@ export default function Livro() {
 
   return (
     <main>
+      <Header />
       {livros.map(livro => (
         <li key={livro.id}>
           <img src={livro.foto} />
@@ -38,6 +40,7 @@ export default function Livro() {
           <p>{livro.postagem}</p>
         </li>
       ))}
+      <Footer />
     </main>
   );
 }

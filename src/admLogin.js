@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Login from "./modules/login";
 import supabase from "./supabase";
+import Footer from "./modules/footer";
 
 export default function Home() {
 
@@ -29,9 +30,7 @@ export default function Home() {
         <main>
           <Login/>
         </main>
-        <footer>
-          <p>Developer: Vitor Muneretto Tinelli</p>
-        </footer>
+        <Footer/>
       </>
     </main>
   )

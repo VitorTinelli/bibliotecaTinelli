@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./index.js";
 import supabase from "./supabase.js"
+import Footer from "./modules/footer.js";
 
 export default function AdminControl() {
     const navigate = useNavigate()
@@ -41,6 +42,7 @@ export default function AdminControl() {
 
                 <main>
                 </main>
+                <Footer/>
             </>
         </main>
     )
