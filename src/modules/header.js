@@ -13,7 +13,7 @@ export default function Header() {
 
     return (
         <header>
-            <h3>Biblioteca do Tinelli</h3>
+            <h3 onClick={() => navigate('/')} className='mouse'>Biblioteca do Tinelli</h3>
             <div>
                 <form className="form_header" onSubmit={handleSearch}>
                     <input

@@ -221,7 +221,78 @@ content {
   cursor: pointer;
 }
 
-.verde{
-  color: lawngreen;
+.rowLivro{
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin-top: 4.5dvw;
+  margin-bottom: 4.5dvw;
+  margin-left: 15dvw;
+  margin-right: 15dvw;
 }
 
+.spaceLivro{
+  margin-right: 10dvw;
+}
+
+.imgLivro{
+  height: 71dvh;
+}
+
+.titleLivro{
+  color: var(--Color-Secondary, #000);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 70dvb;
+  height: 10dvb;
+  font-weight: bolder;
+  color: #ee56ac;
+}
+.descricaoLivro {
+  width: 70dvb;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: normal;
+  text-align: justify;
+  font-family: Nunito Sans;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 35dvb;
+
+  border-style: solid;
+  border-top: #FFF;
+  border-left: #FFF;
+  border-right: #FFF;
+  margin-bottom: 5dvb;
+  font-weight: bold;  
+}
+
+.roxo{
+  color: #ee56ac;
+  font-weight: bold;  
+}
+
+.cor{
+  color: #000;
+  font-weight: normal;
+}
+
+.verde{
+  color: #28af19;
+  font-weight: bold;  
+}
+.amarelo{
+  color: rgb(217, 217, 5);
+  font-weight: bold;  
+}
+
+.vermelho{
+  color: red;
+  font-weight: bold;  
+}

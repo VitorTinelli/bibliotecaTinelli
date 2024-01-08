@@ -17,6 +17,18 @@ export default function Livro() {
         if (error) {
           throw error;
         }
+        if (data[0].nota < 7 && data[0].nota > 5) {
+          const change = document.getElementsByClassName('verde');
+          for (let i = 0; i < change.length; i++) {
+            change[i].className = 'amarelo';
+          }
+        }
+        else if (data[0].nota < 5) {
+          const change = document.getElementsByClassName('verde');
+          for (let i = 0; i < change.length; i++) {
+            change[i].className = 'vermelho';
+          }
+        }
         setLivros(data);
       } catch (error) {
         console.error("Erro ao buscar livros:", error.message);
@@ -28,18 +40,25 @@ export default function Livro() {
   return (
     <main>
       <Header />
-      {livros.map(livro => (
-        <li key={livro.id}>
-          <img src={livro.foto} />
-          <p>{livro.nome}</p>
-          <p>{livro.descricao}</p>
-          <p>{livro.nota}</p>
-          <p>{livro.autor}</p>
-          <p>{livro.editora}</p>
-          <p>{livro.linguagem}</p>
-          <p>{livro.postagem}</p>
-        </li>
-      ))}
+
+      <main>
+        {livros.map(livro => (
+          <li key={livro.id} className="rowLivro">
+            <div className="spaceLivro">
+              <img src={livro.foto} className="imgLivro" />
+            </div>
+            <div>
+              <p className="titleLivro">{livro.nome}</p>
+              <p className="descricaoLivro">{livro.descricao}</p>
+              <p className="verde"><span className="roxo">Nota do Leitor:</span> {livro.nota}<span className="cor">/10</span></p>
+              <p className="roxo">Autor: <span className="cor">{livro.autor}</span></p>
+              <p className="roxo">Editora: <span className="cor">{livro.editora}</span></p>
+              <p className="roxo">Linguagem: <span className="cor">{livro.linguagem}</span></p>
+            </div>
+          </li>
+        ))}
+      </main>
+
       <Footer />
     </main>
   );
